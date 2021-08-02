@@ -8,9 +8,21 @@ const btnsShowModal = document.querySelectorAll('.show-modal');
 
 console.log(btnsShowModal);
 
+const openModal = function () {
+  console.log('Button clicked, Window open');
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  console.log('Modal closed');
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
 for (let i = 0; i < btnsShowModal.length; i++)
-  btnsShowModal[i].addEventListener('click', function () {
-    console.log('Button clicked');
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-  });
+  btnsShowModal[i].addEventListener('click', openModal);
+
+btnCloseModal.addEventListener('click', closeModal);
+
+overlay.addEventListener('click', closeModal);
