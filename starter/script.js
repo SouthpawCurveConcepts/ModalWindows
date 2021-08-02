@@ -1,7 +1,5 @@
 'use strict';
 
-console.log('Hello!');
-
 // Todo: Write the code for lesson 79...
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
